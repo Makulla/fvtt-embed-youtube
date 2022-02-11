@@ -12,7 +12,7 @@ Hooks.on('changeSidebarTab', (playlist) => {
     input.addEventListener("keyup", (event) => { if (event.key === "Enter") {
         youtubeSocket === null || youtubeSocket === void 0 ? void 0 : youtubeSocket.executeForEveryone("play-video", input.value);
     } });
-    input.setAttribute("style", 'background="#ffff5c"');
+    input.setAttribute("style", 'background: #fffff5cc');
     element === null || element === void 0 ? void 0 : element.append(header);
     element === null || element === void 0 ? void 0 : element.append(input);
 });
