@@ -1,10 +1,11 @@
 "use strict";
 let youtubeSocket;
-Hooks.on('changeSidebarTab', (playlist) => {
+Hooks.on('renderPlaylistDirectory', (playlist) => {
     var element = playlist.element[0];
-    var header = document.createElement("h4");
+    var header = document.createElement("footer");
     header.title = "Youtube Video ID";
-    header.className = "playlist-header";
+    header.textContent = "Youtube Video ID";
+    header.className = "directory-footer";
     var input = document.createElement("input");
     input.type = "text";
     input.name = "VideoId Here";
