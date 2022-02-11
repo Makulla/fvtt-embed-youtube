@@ -1,0 +1,1 @@
+console.log("fvtt-embed-youtube");
