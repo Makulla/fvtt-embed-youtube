@@ -1,14 +1,14 @@
 "use strict";
+let dialog = undefined;
 if (window.fvttYtHookId) {
     Hooks.off('createChatMessage', window.fvttYtHookId);
 }
 window.fvttYtHookId = Hooks.on("createChatMessage", (msg) => {
-    var _a;
     let split = msg.data.content.split(':');
     if (split[0] !== 'YTVID') {
         return;
     }
-    window.fvttYtDialog = (_a = window.fvttYtDialog) !== null && _a !== void 0 ? _a : new Dialog({
+    dialog = dialog !== null && dialog !== void 0 ? dialog : new Dialog({
         title: 'Embed Youtube',
         content: '',
         default: '',
