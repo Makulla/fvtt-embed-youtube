@@ -11,6 +11,12 @@
         "dist/scripts/player.js",
         "dist/scripts/input.js"
     ],
+    "dependencies": [
+		{
+			"name": "socketlib",
+			"manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-socketlib/master/module.json"
+		}
+	],
     "url": "https://github.com/Makulla/fvtt-embed-youtube",
     "manifest": "https://raw.githubusercontent.com/Makulla/fvtt-embed-youtube/main/module.json",
     "download": "https://github.com/Makulla/fvtt-embed-youtube/archive/main.zip"
