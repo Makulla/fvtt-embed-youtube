@@ -1,0 +1,27 @@
+{
+  "name": "fvtt-embed-youtube",
+  "version": "0.0.2",
+  "description": "Embeds youtube videos for all players in Foundry.",
+  "main": "dist/scripts/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Makulla/fvtt-embed-youtube.git"
+  },
+  "keywords": [
+    "youtube",
+    "foundry"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Makulla/fvtt-embed-youtube/issues"
+  },
+  "homepage": "https://github.com/Makulla/fvtt-embed-youtube#readme",
+  "devDependencies": {
+    "@league-of-foundry-developers/foundry-vtt-types": "^9.249.0",
+    "typescript": "^4.5.5"
+  }
+}
