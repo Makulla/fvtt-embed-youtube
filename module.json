@@ -7,7 +7,8 @@
     "minimumCoreVersion": "9",
     "compatibleCoreVersion": "9",
     "scripts": [
-        "dist/scripts/script.js"
+        "dist/scripts/player.js",
+        "dist/scripts/input.js"
     ],
     "url": "https://github.com/Makulla/fvtt-embed-youtube",
     "manifest": "https://raw.githubusercontent.com/Makulla/fvtt-embed-youtube/main/module.json",
