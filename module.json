@@ -3,7 +3,8 @@
     "title": "Embed Youtube",
     "description": "Embeds youtube videos for all players in Foundry.",
     "authors": [{ "name": "David" }, { "name": "Matthias" }],
-    "version": "0.0.2",
+    "version": "0.0.3",
+    "socket": true,
     "minimumCoreVersion": "9",
     "compatibleCoreVersion": "9",
     "scripts": [
