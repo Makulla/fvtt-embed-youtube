@@ -1,4 +1,4 @@
-type KnownEvents = "play-video";
+type KnownEvents = "load-video" | "stop-video";
 
 interface SocketLibSocket {
     executeForEveryone(event: KnownEvents, arg: string);

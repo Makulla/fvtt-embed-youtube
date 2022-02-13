@@ -1,23 +1,39 @@
 let youtubeSocket: SocketLibSocket | undefined;
+let container = $("<div class='flexrow'></div>")
+let buttons = $("<div class='sound-controls playlist-controls flexrow'></div>")
+let header = $("<footer title='Youtube Video ID' textContent='Youtube Video ID'>VID ID </footer>")
+let input = $("<input id='vidIdInput' style='background: #fffff5cc'>");
+let iconPlay = $("<i class='fas fa-play'></i>")
+
 Hooks.on('renderPlaylistDirectory', (playlist: PlaylistDirectory) => {
+    $(input).keyup(function (event) {
+        if(event.key === 'Enter') {
+            handleVideoToggle()
+        }
+    })
     
-    var element = playlist.element[0]
-    
-    var header = document.createElement("footer")
-    header.title = "Youtube Video ID"
-    header.textContent = "Youtube Video ID"
-    header.className = "directory-footer"
-    
-    var input = document.createElement("input");
-    input.type = "text";
-    input.name = "VideoId Here";
-    input.className = "header-search directory directory-header input"
-    input.addEventListener("keyup", (event) => {if(event.key === "Enter") {youtubeSocket?.executeForEveryone("play-video", input.value)}})
-    input.setAttribute("style", 'background: #fffff5cc');
-    element?.append(header);
-    element?.append(input);
+    $(iconPlay).click(function (event) {
+        handleVideoToggle()
+    })
+
+    buttons.append(iconPlay)
+    container.append(header)
+    container.append(input)
+    container.append(buttons)
+    playlist.element.find(".directory-footer").append(container);
 });
 
 Hooks.once("socketlib.ready", () => {
     youtubeSocket = socketlib.registerModule("embed-youtube");
 });
+
+function handleVideoToggle() {
+    let content = input.val() as string;
+    if (iconPlay.hasClass("fa-play")) {
+        youtubeSocket?.executeForEveryone("load-video", content)
+    }
+    if(iconPlay.hasClass("fa-stop")) {
+        youtubeSocket?.executeForEveryone("stop-video", content)
+    }
+    iconPlay.toggleClass("fa-play fa-stop")
+}

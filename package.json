@@ -1,6 +1,6 @@
 {
   "name": "fvtt-embed-youtube",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Embeds youtube videos for all players in Foundry.",
   "main": "dist/scripts/script.js",
   "scripts": {
