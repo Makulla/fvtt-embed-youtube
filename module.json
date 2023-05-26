@@ -1,4 +1,5 @@
 {
+    "id": "embed-youtube",
     "name": "embed-youtube",
     "title": "Embed Youtube",
     "description": "Embeds youtube videos for all players in Foundry.",
@@ -6,7 +7,12 @@
     "version": "0.0.8",
     "socket": true,
     "minimumCoreVersion": "9",
-    "compatibleCoreVersion": "9",
+    "compatibleCoreVersion": "10",
+    "compatibility": {
+        "minimum": 9,
+        "verified": 10,
+        "maximum": 10
+    },
     "scripts": [
         "dist/scripts/player.js",
         "dist/scripts/input.js"
@@ -17,6 +23,16 @@
 			"manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-socketlib/master/module.json"
 		}
 	],
+    "relationships": {
+		"requires": [
+				{
+        		"id": "socketlib",
+        		"type": "module",
+        		"manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-socketlib/master/module.json",
+        		"compatibility": {}
+				}
+		]
+    },
     "url": "https://github.com/Makulla/fvtt-embed-youtube",
     "manifest": "https://raw.githubusercontent.com/Makulla/fvtt-embed-youtube/main/module.json",
     "download": "https://github.com/Makulla/fvtt-embed-youtube/archive/main.zip"
